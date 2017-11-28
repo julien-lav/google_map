@@ -17,8 +17,6 @@
 
  function initMap() {
 
- 		
-        
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: {lat: 51.508742, lng: -0.120850}
@@ -57,14 +55,17 @@ cette fonction fait l'equivalent de ce qui ce passe en php avec $_GET
 	d_long = parseInt(d_long);
 
 	if (d_lat >=90 || d_lat <= -90 || d_long >=180 || d_long <= -180 )
-		{ alert('latitude entre 90 et - 90 longitude entre 180 et -180 !')}
+	{ 
+		alert('latitude entre 90 et - 90 longitude entre 180 et -180 !');
+	}
 
-	if (!isNaN(d_lat) || !isNaN(d_long)){
+	else if (!isNaN(d_lat) || !isNaN(d_long)){
+
 
 		function initMap() {
-
- 		a = parseInt(d_lat);
-		b = parseInt(d_long);
+			var a = parseInt(d_lat);
+		    var b = parseInt(d_long);
+ 		
 
 		if(isNaN(a) || isNaN(b)){
         
