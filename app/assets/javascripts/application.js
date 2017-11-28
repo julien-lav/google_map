@@ -15,12 +15,9 @@
 //= require_tree .
 //= require_self
 
- function initMap(a, b) {
+ function initMap() {
 
- 		a = parseInt(a);
-		b = parseInt(b);
-
-		if(isNaN(a) || isNaN(b)){
+ 		
         
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
@@ -33,27 +30,6 @@
           map: map,
           icon: image
         });
-   	} else {
-   	var new_center = { lat: a, 
-                   	   lng: b };
-    console.log(new_center);
-
-    var new_position = { lat: a, 
-                   		 lng: b };
-    console.log(new_position);
-
-	var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 5,
-          center: new_center
-        });
-
-        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-        var beachMarker = new google.maps.Marker({
-          position: new_position,
-          map: map,
-          icon: image
-        });
-   	}
 }
 /* 
 Je passe par une methode Get pour changer, 
@@ -124,7 +100,7 @@ cette fonction fait l'equivalent de ce qui ce passe en php avec $_GET
           icon: image
         });
    	}
+  }
 }
-	}
 
 
